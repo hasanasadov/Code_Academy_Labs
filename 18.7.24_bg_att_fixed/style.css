@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: #777;
+    height: 100vh;
+}
+
+.bg-2 > .caption >span, .bg-3 > .caption >span{
+    background-color: transparent;
+}
+
+.bg-1,
+.bg-2,
+.bg-3,
+.bg-4 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.text-1 {
+    padding: 50px 80px;
+}
+
+.text-1>h3 {
+    padding: 20px;
+    text-align: center;
+}
+
+.scroll {
+    padding: 50px 80px;
+    background-color: rgb(128, 128, 128);
+    color: white ;
+}
+
+.scroll>div>p {
+    font-size: large;
+    margin: 15px 0;
+}
+
+.bg-1,
+.bg-4 {
+    background-image: url("./img/img_parallax.jpg");
+    min-height: 100%;
+}
+
+.bg-2 {
+    background-image: url("./img/img_parallax2.jpg");
+    min-height: 400px;
+}
+
+.bg-3 {
+    background-image: url("./img/img_parallax3.jpg");
+    min-height: 400px;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.caption span {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+
+h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: #111;
+}
