@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+.header {
+  padding: 10px;
+  background-color: #32334C !important;
+}
+.header .header-top {
+  padding: 15px 0;
+}
+.header .header-bottom {
+  margin-top: 50px;
+  padding: 15px 0;
+}
+
+li, .btn {
+  font-family: Epilogue, sans-serif;
+  color: rgb(181, 181, 181);
+}
+
+.btn, .btnn {
+  padding: 10px 20px;
+  padding-top: 12px;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.2941176471);
+  display: flex;
+  align-items: center;
+}
+
+.how {
+  background-color: #EF6D58;
+  border: none;
+}
+
+.con {
+  border: none !important;
+  background-color: transparent;
+}
+
+.ham {
+  display: none;
+}
+
+.texts h4 {
+  font-family: Epilogue, sans-serif;
+  color: #EF6D58;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 3px;
+}
+.texts h1 {
+  font-family: Epilogue, sans-serif;
+  color: #ffffff;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 80px;
+  letter-spacing: -2px;
+}
+.texts p {
+  font-family: Epilogue, sans-serif;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+@media (max-width: 992px) {
+  .links, .btn {
+    display: none;
+  }
+  .ham {
+    display: flex;
+    align-items: center;
+    width: 50px;
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2941176471);
+    border-radius: 8px;
+  }
+}/*# sourceMappingURL=style.css.map */
