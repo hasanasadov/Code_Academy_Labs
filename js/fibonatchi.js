@@ -8,15 +8,14 @@ function fibonatchi(n){
 console.log(fibonatchi(10));
 */
 
-var n = 10;
-var str = "";
+const n = 10;
+let str = "";
 
 var a = 0;
 var b = 1;
 var c = a + b;
 
-
-for (var i = 0; i < n; i++) {
+for (let i = 0; i < n; i++) {
     str += c + " ";
     c = a + b;
     a = b;
