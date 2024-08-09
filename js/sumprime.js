@@ -3,7 +3,8 @@ var sum = 0;
 let strsum="";
 let count = 0;
 
-for(var i = 2; i < 999999; i++){
+var i =2
+while(true){
     var isprime = true;
 
     for(var j = 2; j <= i/2; j++){
@@ -13,12 +14,16 @@ for(var i = 2; i < 999999; i++){
         }
     }
     if(isprime){
-        strsum+=i+" + ";
+        if (count === 99){
+            strsum+=i;
+        }
+        else{strsum+=i+" + ";}
         sum += i;
         count++;
     }
     if(count === 100){
         break;
     }
+    i++;
 }
 console.log(strsum," = ",sum);
