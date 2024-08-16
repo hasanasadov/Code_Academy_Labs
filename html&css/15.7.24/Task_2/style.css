@@ -1,0 +1,29 @@
+div {
+    display: inline-block;
+}
+
+input:focus {
+    background-color: yellow;
+}
+
+input:hover {
+    border-radius: 5px;
+    background-color: aqua;
+    width: 500px;
+    height: 30px;
+}
+
+button:focus {
+    background-color: yellow;
+}
+button:hover {
+    background-color: aqua;
+}
+input {
+    display: block; 
+    margin: 15px;
+}
+button {
+    display: inline;
+    margin-left: 94px;
+}

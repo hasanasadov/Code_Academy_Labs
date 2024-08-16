@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playwrite+CU:wght@100..400&family=Playwrite+PE:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+body {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-image: url(https://ires.ubc.ca/files/2015/07/Green-Field.jpg);
+}
+
+
+.headd {
+    margin: 10px;
+    margin-bottom:40px;
+    width: 310px;
+    font-size: 40px;
+    font-weight: bold;
+    border-bottom: 2px solid red;
+    color:white
+}
+
+.boddy {
+    margin: 10px;
+}
+
+.content {
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 15px;
+    
+}
+.back {
+    color:white;
+    background-color: red;
+    padding: 5px;
+
+}
+.lorem {
+    padding: 15px;
+    position: relative;
+    padding-top: 20px;
+    font-size: 30px;
+    background-color: rgb(189, 188, 188, 0.7);
+}
+.down {
+    position: absolute;
+    top: 20px;
+    right: 8px;
+    background-color: red;
+    border: 1px solid black;
+    font-weight: bold;
+    padding: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+}
+
+#id1 {
+    font-family: "Playwrite CU", cursive;
+}
+#id2 {
+    font-family:"Oswald", sans-serif;
+}
+#id3 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#id4 {
+    font-family:"Playwrite BE VLG",cursive;
+}
+#id5 {
+    font-family:"Inconsolata", monospace;
+}
+
+.kolgeli {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-weight: bold;
+    text-shadow: -1px 2px 5px rgba(0,0,0,1);
+}
+
+#by {
+    color: black;
+}
+img {
+    width: 15px;
+}
+a {
+    text-decoration: none;
+    color:white;
+}
+
+button:active {
+    background-color: #3e8e41; 
+    box-shadow: 0 5px rgb(0, 0, 0); 
+    transform: translateY(2px); 
+}
