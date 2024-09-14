@@ -1,33 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import xImg from "../assets/x.svg";
 
-function ToDoEl({ id, checked, task, setData, data }) {
-    console.log(checked);
+function ToDoEl({ id, checked, task, setData, hide }) {
+    const [isHovered, setIsHovered] = useState(false);
 
-    const handleToggle = (id) => {
-        const completed = data.map((el) => {
-            if (el.id === id) {
-                return { ...el, checked: !checked  };
-            }
-            return el;
-        });
-        console.log("tapildi", completed);
-        setData(completed);
+    const handleMouseEnter = () => {
+        setIsHovered(true);
     };
-    
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    };
+
+    const handleClick = () => {
+        setData((prev) => prev.filter((el) => el.id !== id));
+    };
+
+    const handleChange = () => {
+        setData((data) =>
+            data.map((el) =>
+                el.id === id ? { ...el, checked: !el.checked } : el
+            )
+        );
+    };
+
     return (
-        <li className="liItem">
+        <li
+            className={"liItem " + (hide ? "hide" : "")}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
             <div className="li-left">
                 <input
                     className="toggle"
                     type="checkbox"
                     checked={checked}
-                    onChange={(e) => handleToggle(id)}
+                    onChange={handleChange}
                 />
-                <span className="notchecked">{task}</span>
+                <span className={`notchecked ${checked ? "completed" : ""}`}>
+                    {task}
+                </span>
             </div>
-            <button className="deleteBtn">
-                <img className="deleteSvg" src={xImg} alt="" />
+            <button
+                className={`deleteBtn ${isHovered ? "show" : ""}`}
+                onClick={handleClick}
+            >
+                <img className="deleteSvg" src={xImg} alt="Delete" />
             </button>
         </li>
     );

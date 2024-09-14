@@ -1,22 +1,33 @@
 import React, { useState } from "react";
 import down from "../assets/down.svg";
 
-const Header = ({ setData }) => {
+const Header = ({data, setData }) => {
     const [value, setValue] = useState("");
+
     const handleKeyDown = (e) => {
         if (e.key === "Enter") {
-            if(!e.target.value.trim()){return;}
-            setValue(e.target.value.trim())
+            const inputValue = e.target.value.trim(); 
+            if (!inputValue) return; 
+            
             setData((prev) => [
                 ...prev,
-                { id: Date.now(), value, checked: false },
+                { id: Date.now(), value: inputValue, checked: false }, 
             ]);
-            setValue("");
+            setValue(""); 
         }
     };
+
+    const handleClick = (data) => {
+        //This is FANTASTICCCCCCCC!!!!
+        const allChecked = data.every((el) => el.checked);
+        const newData = data.map((el) => ({ ...el, checked: !allChecked }));
+        setData(newData);
+    };
+    
+
     return (
         <div className="header">
-            <button id="doneAll">
+            <button id="doneAll" onClick={()=>handleClick(data)}>
                 <img className="doneAllSvg" src={down} alt="" />
             </button>
             <input

@@ -2,20 +2,20 @@ import React from "react";
 import ToDoEl from "./ToDoEl";
 
 function List({ data, setData }) {
-    
     return (
         <ul id="list">
-            {data.map((el) => {
-                return (
-                    <ToDoEl
-                        key={el.id}
-                        checked={el.checked}
-                        task={el.value}
-                        setData={setData}
-                        data={data}
-                    />
-                );
-            })}
+            {console.log(data)}
+            {data.map((el) => (
+                <ToDoEl
+                    key={el.id}
+                    checked={el.checked}
+                    id={el.id}
+                    task={el.value}
+                    setData={setData}
+                    hide={el.hide}
+                    className={el.hide ? "hide" : ""}
+                />
+            ))}
         </ul>
     );
 }
