@@ -4,7 +4,6 @@ import ToDoEl from "./ToDoEl";
 function List({ data, setData }) {
     return (
         <ul id="list">
-            {console.log(data)}
             {data.map((el) => (
                 <ToDoEl
                     key={el.id}

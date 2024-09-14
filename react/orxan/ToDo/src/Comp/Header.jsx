@@ -8,7 +8,6 @@ const Header = ({data, setData }) => {
         if (e.key === "Enter") {
             const inputValue = e.target.value.trim(); 
             if (!inputValue) return; 
-            
             setData((prev) => [
                 ...prev,
                 { id: Date.now(), value: inputValue, checked: false }, 

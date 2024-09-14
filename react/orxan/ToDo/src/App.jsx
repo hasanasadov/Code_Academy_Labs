@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import Header from "./Comp/Header";
 import List from "./Comp/List";
 import Footer from "./Comp/Footer";
@@ -6,6 +6,16 @@ import "./App.css";
 
 function App() {
     const [data, setData] = useState([]);
+
+    useEffect(() => {
+        const savedData = JSON.parse(localStorage.getItem('todoData')) || [];
+        setData(savedData);
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('todoData', JSON.stringify(data));
+    }, [data]);
+
 
     return (
         <>
